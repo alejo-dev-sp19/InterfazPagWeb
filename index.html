@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programación Web Avanzada - Universidad Tecnológica</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <i class="fas fa-graduation-cap"></i>
+                <h1>Programación Web Avanzada</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#inicio"><i class="fas fa-home"></i> Inicio</a></li>
+                    <li><a href="#recursos"><i class="fas fa-book"></i> Recursos</a></li>
+                    <li><a href="#calendario"><i class="fas fa-calendar"></i> Calendario</a></li>
+                    <li><a href="#ayuda"><i class="fas fa-question-circle"></i> Ayuda</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <aside class="left-column">
+            <h2>Programación Web Avanzada</h2>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="#" onclick="showSection('estudiantes'); return false;"><i class="fas fa-users"></i> Listado de Estudiantes</a></li>
+                    <li><a href="#" onclick="showSection('foro'); return false;"><i class="fas fa-comments"></i> Foro de la Asignatura</a></li>
+                    <li><a href="#" onclick="showSection('calificaciones'); return false;"><i class="fas fa-chart-bar"></i> Calificaciones</a></li>
+                    <li><a href="#" onclick="showSection('temas'); return false;"><i class="fas fa-folder-open"></i> Temas del Curso</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <section class="center-column">
+            <div id="temas-section" class="content-section active">
+                <h2>Temas del Curso</h2>
+                
+                <article class="topic">
+                    <img src="https://images.unsplash.com/photo-1627398242454-45a1465c2479?w=400" alt="HTML5 y CSS3">
+                    <div class="topic-content">
+                        <h3>HTML5 Semántico y Estructura</h3>
+                        <p>Aprenderemos a utilizar las etiquetas semánticas de HTML5 para crear estructuras web accesibles y bien organizadas. Estudiaremos elementos como header, nav, main, section, article, aside y footer para mejorar la comprensión del código tanto por humanos como por motores de búsqueda.</p>
+                        <div class="videos">
+                            <h4>Videos del tema</h4>
+                            <div class="video-item">
+                                <h5>Introducción a HTML5 Semántico</h5>
+                                <p>Conceptos básicos sobre la importancia de la semántica en el desarrollo web moderno.</p>
+                            </div>
+                            <div class="video-item">
+                                <h5>Estructura de Documentos HTML5</h5>
+                                <p>Cómo organizar correctamente las secciones principales de una página web.</p>
+                            </div>
+                            <div class="video-item">
+                                <h5>Accesibilidad con HTML5</h5>
+                                <p>Mejores prácticas para hacer sitios web accesibles usando etiquetas semánticas.</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="topic">
+                    <img src="https://images.unsplash.com/photo-1621839673705-6617adf9e890?w=400" alt="JavaScript">
+                    <div class="topic-content">
+                        <h3>JavaScript Moderno y DOM</h3>
+                        <p>Exploraremos las funcionalidades modernas de JavaScript ES6+ y cómo manipular el Document Object Model (DOM) para crear interfaces interactivas. Cubriremos conceptos como arrow functions, destructuring, y métodos modernos de arrays.</p>
+                        <div class="videos">
+                            <h4>Videos del tema</h4>
+                            <div class="video-item">
+                                <h5>Manipulación del DOM con JavaScript</h5>
+                                <p>Técnicas para seleccionar y modificar elementos del documento dinámicamente.</p>
+                            </div>
+                            <div class="video-item">
+                                <h5>Eventos y Manejadores en JS</h5>
+                                <p>Cómo responder a interacciones del usuario mediante event listeners.</p>
+                            </div>
+                            <div class="video-item">
+                                <h5>JavaScript Asíncrono</h5>
+                                <p>Introducción a Promises, async/await y peticiones fetch.</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="topic">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400" alt="CSS Grid y Flexbox">
+                    <div class="topic-content">
+                        <h3>Diseño Responsive con CSS3</h3>
+                        <p>Domina las técnicas de diseño responsive utilizando CSS Grid y Flexbox. Aprenderemos a crear layouts que se adapten a diferentes tamaños de pantalla, implementando media queries y unidades relativas para una experiencia óptima en móviles y tablets.</p>
+                        <div class="videos">
+                            <h4>Videos del tema</h4>
+                            <div class="video-item">
+                                <h5>Flexbox Fundamentals</h5>
+                                <p>Domina las propiedades principales de Flexbox para layouts unidimensionales.</p>
+                            </div>
+                            <div class="video-item">
+                                <h5>CSS Grid Layout</h5>
+                                <p>Creación de diseños bidimensionales complejos con Grid CSS.</p>
+                            </div>
+                            <div class="video-item">
+                                <h5>Media Queries en Acción</h5>
+                                <p>Cómo adaptar tu diseño a diferentes dispositivos y resoluciones.</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div id="estudiantes-section" class="content-section">
+                <h2>Listado de Estudiantes</h2>
+                <div class="students-grid">
+                    <div class="student-card">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100" alt="María González">
+                        <div class="student-info">
+                            <h4>María González</h4>
+                            <p>maria.gonzalez@estudiante.edu</p>
+                        </div>
+                        <i class="fas fa-envelope message-icon"></i>
+                    </div>
+                    <div class="student-card">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100" alt="Carlos Rodríguez">
+                        <div class="student-info">
+                            <h4>Carlos Rodríguez</h4>
+                            <p>carlos.rodriguez@estudiante.edu</p>
+                        </div>
+                        <i class="fas fa-envelope message-icon"></i>
+                    </div>
+                    <div class="student-card">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100" alt="Ana Martínez">
+                        <div class="student-info">
+                            <h4>Ana Martínez</h4>
+                            <p>ana.martinez@estudiante.edu</p>
+                        </div>
+                        <i class="fas fa-envelope message-icon"></i>
+                    </div>
+                    <div class="student-card">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100" alt="Luis Fernández">
+                        <div class="student-info">
+                            <h4>Luis Fernández</h4>
+                            <p>luis.fernandez@estudiante.edu</p>
+                        </div>
+                        <i class="fas fa-envelope message-icon"></i>
+                    </div>
+                    <div class="student-card">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100" alt="Sofía López">
+                        <div class="student-info">
+                            <h4>Sofía López</h4>
+                            <p>sofia.lopez@estudiante.edu</p>
+                        </div>
+                        <i class="fas fa-envelope message-icon"></i>
+                    </div>
+                    <div class="student-card">
+                        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100" alt="Diego Herrera">
+                        <div class="student-info">
+                            <h4>Diego Herrera</h4>
+                            <p>diego.herrera@estudiante.edu</p>
+                        </div>
+                        <i class="fas fa-envelope message-icon"></i>
+                    </div>
+                    <div class="student-card">
+                        <img src="https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?w=100" alt="Valentina Torres">
+                        <div class="student-info">
+                            <h4>Valentina Torres</h4>
+                            <p>valentina.torres@estudiante.edu</p>
+                        </div>
+                        <i class="fas fa-envelope message-icon"></i>
+                    </div>
+                    <div class="student-card">
+                        <img src="https://images.unsplash.com/photo-1507591064344-4c6ce005-128?w=100" alt="Mateo Vargas">
+                        <div class="student-info">
+                            <h4>Mateo Vargas</h4>
+                            <p>mateo.vargas@estudiante.edu</p>
+                        </div>
+                        <i class="fas fa-envelope message-icon"></i>
+                    </div>
+                    <div class="student-card">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100" alt="Camila Soto">
+                        <div class="student-info">
+                            <h4>Camila Soto</h4>
+                            <p>camila.soto@estudiante.edu</p>
+                        </div>
+                        <i class="fas fa-envelope message-icon"></i>
+                    </div>
+                    <div class="student-card">
+                        <img src="https://images.unsplash.com/photo-1507591064344-4c6ce005-128?w=100" alt="Javier Mendoza">
+                        <div class="student-info">
+                            <h4>Javier Mendoza</h4>
+                            <p>javier.mendoza@estudiante.edu</p>
+                        </div>
+                        <i class="fas fa-envelope message-icon"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div id="foro-section" class="content-section">
+                <h2>Foro de la Asignatura</h2>
+                <div class="forum-threads">
+                    <div class="thread">
+                        <h4>Dudas sobre el primer proyecto</h4>
+                        <div class="thread-info">
+                            <span><i class="fas fa-comment"></i> 12 mensajes</span>
+                            <span><i class="fas fa-clock"></i> Último: 05/05/2026 14:30</span>
+                        </div>
+                    </div>
+                    <div class="thread">
+                        <h4>Recursos adicionales para CSS Grid</h4>
+                        <div class="thread-info">
+                            <span><i class="fas fa-comment"></i> 8 mensajes</span>
+                            <span><i class="fas fa-clock"></i> Último: 04/05/2026 10:15</span>
+                        </div>
+                    </div>
+                    <div class="thread">
+                        <h4>Entrega retrasada - Actividad 2</h4>
+                        <div class="thread-info">
+                            <span><i class="fas fa-comment"></i> 5 mensajes</span>
+                            <span><i class="fas fa-clock"></i> Último: 03/05/2026 16:45</span>
+                        </div>
+                    </div>
+                    <div class="thread">
+                        <h4>Consulta sobre JavaScript asíncrono</h4>
+                        <div class="thread-info">
+                            <span><i class="fas fa-comment"></i> 15 mensajes</span>
+                            <span><i class="fas fa-clock"></i> Último: 02/05/2026 09:20</span>
+                        </div>
+                    </div>
+                    <div class="thread">
+                        <h4>Sugerencias para el examen final</h4>
+                        <div class="thread-info">
+                            <span><i class="fas fa-comment"></i> 20 mensajes</span>
+                            <span><i class="fas fa-clock"></i> Último: 01/05/2026 18:00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="calificaciones-section" class="content-section">
+                <h2>Calificaciones</h2>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Estudiante</th>
+                                <th>Actividad 1</th>
+                                <th>Actividad 2</th>
+                                <th>Actividad 3</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>María González</td>
+                                <td>9.5</td>
+                                <td>8.0</td>
+                                <td>10.0</td>
+                            </tr>
+                            <tr>
+                                <td>Carlos Rodríguez</td>
+                                <td>7.5</td>
+                                <td>8.5</td>
+                                <td>9.0</td>
+                            </tr>
+                            <tr>
+                                <td>Ana Martínez</td>
+                                <td>10.0</td>
+                                <td>9.5</td>
+                                <td>9.5</td>
+                            </tr>
+                            <tr>
+                                <td>Luis Fernández</td>
+                                <td>6.0</td>
+                                <td>7.0</td>
+                                <td>8.0</td>
+                            </tr>
+                            <tr>
+                                <td>Sofía López</td>
+                                <td>8.5</td>
+                                <td>9.0</td>
+                                <td>8.5</td>
+                            </tr>
+                            <tr>
+                                <td>Diego Herrera</td>
+                                <td>9.0</td>
+                                <td>8.0</td>
+                                <td>7.5</td>
+                            </tr>
+                            <tr>
+                                <td>Valentina Torres</td>
+                                <td>9.5</td>
+                                <td>10.0</td>
+                                <td>9.5</td>
+                            </tr>
+                            <tr>
+                                <td>Mateo Vargas</td>
+                                <td>7.0</td>
+                                <td>6.5</td>
+                                <td>7.0</td>
+                            </tr>
+                            <tr>
+                                <td>Camila Soto</td>
+                                <td>8.0</td>
+                                <td>8.5</td>
+                                <td>9.0</td>
+                            </tr>
+                            <tr>
+                                <td>Javier Mendoza</td>
+                                <td>6.5</td>
+                                <td>7.5</td>
+                                <td>8.0</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <aside class="right-column">
+            <div class="news-section">
+                <h3><i class="fas fa-bullhorn"></i> Novedades Recientes</h3>
+                <div class="news-item">
+                    <p class="date">05/05/2026</p>
+                    <p>Publicado nuevo material de lectura sobre CSS Grid en la sección de recursos.</p>
+                </div>
+                <div class="news-item">
+                    <p class="date">04/05/2026</p>
+                    <p>Nuevo hilo creado en el foro: "Dudas sobre JavaScript asíncrono".</p>
+                </div>
+                <div class="news-item">
+                    <p class="date">03/05/2026</p>
+                    <p>Disponible recurso adicional: Guía de buenas prácticas en HTML5.</p>
+                </div>
+                <div class="news-item">
+                    <p class="date">02/05/2026</p>
+                    <p>Recordatorio: La Actividad 2 vence este viernes 8 de mayo.</p>
+                </div>
+            </div>
+            <div class="events-section">
+                <h3><i class="fas fa-calendar-alt"></i> Próximos Eventos</h3>
+                <div class="event-item">
+                    <p class="event-date"><i class="fas fa-video"></i> 06/05/2026 - 10:00</p>
+                    <p>Clase en vivo: Introducción a React</p>
+                </div>
+                <div class="event-item">
+                    <p class="event-date"><i class="fas fa-file-alt"></i> 08/05/2026 - 23:59</p>
+                    <p>Entrega: Actividad 2 - Diseño Responsive</p>
+                </div>
+                <div class="event-item">
+                    <p class="event-date"><i class="fas fa-video"></i> 13/05/2026 - 10:00</p>
+                    <p>Clase en vivo: APIs y Fetch</p>
+                </div>
+                <div class="event-item">
+                    <p class="event-date"><i class="fas fa-file-alt"></i> 20/05/2026 - 23:59</p>
+                    <p>Entrega: Actividad 3 - Proyecto Final</p>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <a href="https://www.universidad.edu">Sitio Web de la Universidad</a>
+            <span class="separator">|</span>
+            <a href="#copyright">© 2026 Universidad Tecnológica - Todos los derechos reservados</a>
+            <span class="separator">|</span>
+            <a href="#privacidad">Política de Privacidad</a>
+            <span class="separator">|</span>
+            <a href="#terminos">Términos de Uso</a>
+        </div>
+    </footer>
+
+    <script>
+        function showSection(section) {
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(s => s.classList.remove('active'));
+            
+            const targetSection = document.getElementById(section + '-section');
+            if (targetSection) {
+                targetSection.classList.add('active');
+            }
+        }
+    </script>
+</body>
+</html>
