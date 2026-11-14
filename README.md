@@ -1,18 +1,12 @@
 # InterfazPagWeb
 
-Interfaz web de laboratorio clinico.
+Interfaz web de un laboratorio clínico.
 Es solo el diseño del frontend: no incluye backend ni base de datos.
 
 ## Tecnologías
 
 - HTML
-- [CSS / JavaScript, si los usaste]
-
-## Qué incluye
-
-- [Pantalla o sección 1, por ejemplo: página de inicio]
-- [Pantalla o sección 2, por ejemplo: formulario de contacto]
-- [Diseño adaptable a celular, si es así]
+- CSS
 
 ## Cómo verlo
 
